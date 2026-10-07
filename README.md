@@ -1,32 +1,34 @@
 # FIFA 07 Web
 
-Proyecto para llevar **FIFA 07** (versión PlayStation) al navegador, inspirado en el port web de PES 6 de OptiProjects.
+Proyecto para llevar **FIFA 07 (versión PSP)** al navegador, inspirado en el port web de PES 6 de OptiProjects.
 
 ## Objetivo
 
-Hacer que FIFA 07 se pueda jugar directo en el navegador, sin instalar nada, preferentemente la versión de PS2 o PSP.
+Hacer que FIFA 07 de **PSP** se pueda jugar directo en el navegador, sin instalar nada.
+
+Misma idea que el PES 6 web: recompilar / adaptar la versión de PSP a WebAssembly.
 
 ## Estado actual
 
-- [ ] Investigar viabilidad con Play!.js (emulador PS2 en WebAssembly)
-- [ ] Probar versión PSP con emulador PSP compilado a WASM (más liviano)
-- [ ] Evaluar port nativo / recompilación como hizo Opti con PES 6
-- [ ] Online (opcional)
+- [ ] Investigar cómo OptiProjects hizo el PES 6 (PSP → WASM)
+- [ ] Probar emulación PSP en WebAssembly (PPSSPP u otros cores)
+- [ ] Evaluar recompilación / port nativo de la versión PSP
+- [ ] Online (opcional, como el PES 6)
 - [ ] Controles táctiles + gamepad
+- [ ] Soporte de option files / parches
 
-## Ideas técnicas
+## Por qué PSP y no PS2
 
-- **Opción A (más fácil)**: Emulación PS2 vía Play!.js o similar
-- **Opción B (mejor performance)**: Usar versión PSP + emulador PSP en WASM
-- **Opción C (pro)**: Recompilar/reimplementar partes como hizo el PES 6 web
+La versión de PSP es mucho más viable para llevar al navegador (como demostró el PES 6).  
+PS2 es bastante más pesado de emular en WebAssembly actualmente.
 
-## Por qué este juego
+## Referencia
 
-FIFA 07 es un clásico de la época dorada PS2 y todavía tiene mucha gente que lo busca. Si el PES 6 pudo, este también debería poder.
+- PES 6 Web: [pes6.optijuegos.net](https://pes6.optijuegos.net/)
 
 ---
 
-**Repo creado para arrancar el proyecto.**  
+**Repo enfocado en la versión PSP.**  
 Cualquier colaboración es bienvenida.
 
 🔥 Vamos a hacer que pase.
