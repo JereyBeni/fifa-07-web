@@ -1,0 +1,46 @@
+# FIFA 07 Official Soundtrack (PSP)
+# 40 tracks
+#
+# Formato recomendado para el port web: OGG Vorbis
+# Ubicación final: assets/audio/music/
+
+angelique.ogg
+belasco.ogg
+bersuit.ogg
+bitman_and_roban.ogg
+blasted_mechanism.ogg
+boy_kill_boy.ogg
+cabas.ogg
+carlos_jean.ogg
+doch.ogg
+elefant.ogg
+epik_high.ogg
+fertig_los.ogg
+infadels.ogg
+keane.ogg
+malibu_stacey.ogg
+mellowdrone.ogg
+mobile.ogg
+morning_runner.ogg
+muse.ogg
+nightmare.ogg
+outlandish.ogg
+paul_oakenfold.ogg
+persephones_bees.ogg
+plastilina_mosh.ogg
+polysics.ogg
+prototypes.ogg
+ralph_myerz.ogg
+seu_jorge.ogg
+shinytoyguns.ogg
+stijn.ogg
+surferosa.ogg
+tahiti_80.ogg
+the_feeling.ogg
+the_pinker_tones.ogg
+the_sheer.ogg
+tigarah.ogg
+trash_inc.ogg
+us3.ogg
+young_love.ogg
+young_punx.ogg
