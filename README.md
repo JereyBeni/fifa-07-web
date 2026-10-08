@@ -4,23 +4,33 @@ Proyecto para llevar **FIFA 07 (versión PSP)** al navegador, inspirado en el po
 
 ## Objetivo
 
-Hacer que FIFA 07 de **PSP** se pueda jugar directo en el navegador, sin instalar nada.
+Hacer que FIFA 07 de PSP se pueda jugar **directo en el navegador**, sin instalar nada y **sin que el usuario tenga que subir ninguna ROM**.
 
-Misma idea que el PES 6 web: recompilar / adaptar la versión de PSP a WebAssembly.
+## Enfoque técnico (importante)
+
+**No** vamos a poner un emulador que cargue la ISO completa como si fuera un CD virtual.
+
+El plan real es:
+
+1. Extraer todos los archivos de la ISO/CSO de FIFA 07 PSP (texturas, modelos, sonidos, datos de equipos, scripts, etc.)
+2. Convertir/adaptar esos assets para que funcionen nativamente en el navegador (WebAssembly + WebGL)
+3. Reimplementar o adaptar el motor del juego para que use esos archivos directamente desde la web
+
+Es un **port**, no una emulación clásica.
 
 ## Estado actual
 
 - [ ] Investigar cómo OptiProjects hizo el PES 6 (PSP → WASM)
-- [ ] Probar emulación PSP en WebAssembly (PPSSPP u otros cores)
-- [ ] Evaluar recompilación / port nativo de la versión PSP
-- [ ] Online (opcional, como el PES 6)
+- [ ] Extraer y analizar la estructura de archivos de FIFA 07 PSP
+- [ ] Evaluar recompilación / port nativo
+- [ ] Online (opcional)
 - [ ] Controles táctiles + gamepad
 - [ ] Soporte de option files / parches
 
-## Por qué PSP y no PS2
+## Por qué PSP
 
 La versión de PSP es mucho más viable para llevar al navegador (como demostró el PES 6).  
-PS2 es bastante más pesado de emular en WebAssembly actualmente.
+PS2 es bastante más pesado actualmente.
 
 ## Referencia
 
@@ -28,7 +38,7 @@ PS2 es bastante más pesado de emular en WebAssembly actualmente.
 
 ---
 
-**Repo enfocado en la versión PSP.**  
+**Repo enfocado en port real de la versión PSP.**  
 Cualquier colaboración es bienvenida.
 
 🔥 Vamos a hacer que pase.
