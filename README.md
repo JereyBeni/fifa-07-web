@@ -18,33 +18,56 @@ El plan real es:
 
 Es un **port**, no una emulación clásica.
 
+## Estructura del repositorio
+
+```
+fifa-07-web/
+├── assets/
+│   ├── audio/
+│   │   └── music/          # Tracks del soundtrack (convertidos a .ogg/.mp3)
+│   ├── meshes/             # Modelos / efectos (.msh → glTF o custom)
+│   ├── textures/           # Texturas convertidas
+│   ├── fonts/              # Fuentes (.mfn → web fonts)
+│   ├── gui/                # Elementos de interfaz
+│   └── data/               # Datos de juego (equipos, ligas, etc.)
+├── src/                    # Código fuente del port (JS / WASM)
+├── docs/                   # Documentación técnica y reverse engineering
+├── tools/                  # Scripts de extracción y conversión
+└── README.md
+```
+
 ## Estado actual
 
-- [x] Assets recibidos (Parte 1) — música (.dat), meshes (.msh), fuente y PNG
+- [x] Repo creado + estructura de carpetas
+- [x] Assets recibidos (Parte 1 + Parte 2) — música (.dat), meshes (.msh), fuente
+- [ ] Convertir tracks de audio (.dat → .ogg)
+- [ ] Analizar formato SHPM de los .msh
 - [ ] Investigar cómo OptiProjects hizo el PES 6 (PSP → WASM)
-- [ ] Extraer y analizar la estructura de archivos de FIFA 07 PSP
+- [ ] Extraer y analizar la estructura completa de archivos de FIFA 07 PSP
 - [ ] Evaluar recompilación / port nativo
-- [ ] Online (opcional)
 - [ ] Controles táctiles + gamepad
-- [ ] Soporte de option files / parches
+- [ ] Online (opcional)
 
-## Assets recibidos (Parte 1)
+## Assets recibidos
 
-Se recibieron archivos extraídos (parte 1):
+### Música / Audio (.dat) — Parte 1 + Parte 2
 
-### Música / Audio (.dat)
-Archivos nombrados por artistas del soundtrack (Muse, Keane, Epik High, Cabas, Seu Jorge, etc.).  
-Parecen contenedores de audio del juego (formato propietario, header `00 1E 02 00...`).
+40 tracks del soundtrack oficial de FIFA 07 (formato propietario EA, header `00 1E 02 00`).
+
+Artistas incluidos: Keane, Muse, Epik High, Seu Jorge, Plastilina Mosh, The Feeling, Polysics, Cabas, Outlandish, Paul Oakenfold, y muchos más.
+
+**Ubicación final:** `assets/audio/music/`
 
 ### Meshes (.msh)
-Formato SHPMP (posible mesh/partículas/UI del menú o efectos).  
-Ejemplos: `bubbles.msh`, `coreburst.msh`, `fireworks_bkg.msh`, etc.
+Formato SHPM (meshes / partículas / UI / efectos).
+Ejemplos: `bubbles.msh`, `coreburst.msh`, `fireworks_bkg.msh`, `controlpad.msh`, etc.
 
-### Otros
-- `lucida10.mfn` → fuente (FntM)
-- `image.png` → imagen auxiliar
+**Ubicación final:** `assets/meshes/`
 
-**Nota:** Los binarios grandes se organizaron localmente. Para subirlos al repo conviene usar Git LFS o subirlos manualmente en una carpeta `assets/`.
+### Fuentes
+- `lucida10.mfn` → fuente del juego
+
+**Ubicación final:** `assets/fonts/`
 
 ## Por qué PSP
 
