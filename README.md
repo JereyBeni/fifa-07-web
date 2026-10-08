@@ -20,12 +20,31 @@ Es un **port**, no una emulación clásica.
 
 ## Estado actual
 
+- [x] Assets recibidos (Parte 1) — música (.dat), meshes (.msh), fuente y PNG
 - [ ] Investigar cómo OptiProjects hizo el PES 6 (PSP → WASM)
 - [ ] Extraer y analizar la estructura de archivos de FIFA 07 PSP
 - [ ] Evaluar recompilación / port nativo
 - [ ] Online (opcional)
 - [ ] Controles táctiles + gamepad
 - [ ] Soporte de option files / parches
+
+## Assets recibidos (Parte 1)
+
+Se recibieron archivos extraídos (parte 1):
+
+### Música / Audio (.dat)
+Archivos nombrados por artistas del soundtrack (Muse, Keane, Epik High, Cabas, Seu Jorge, etc.).  
+Parecen contenedores de audio del juego (formato propietario, header `00 1E 02 00...`).
+
+### Meshes (.msh)
+Formato SHPMP (posible mesh/partículas/UI del menú o efectos).  
+Ejemplos: `bubbles.msh`, `coreburst.msh`, `fireworks_bkg.msh`, etc.
+
+### Otros
+- `lucida10.mfn` → fuente (FntM)
+- `image.png` → imagen auxiliar
+
+**Nota:** Los binarios grandes se organizaron localmente. Para subirlos al repo conviene usar Git LFS o subirlos manualmente en una carpeta `assets/`.
 
 ## Por qué PSP
 
